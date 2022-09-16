@@ -21,11 +21,11 @@
                 <ColumnDefinition Width="180" />
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="0" Grid.Column="0" Text="Layouts" BackgroundColor="cadetblue" CornerRadius="7" />
-            <Button Grid.Row="0" Grid.Column="1" Text="Image" BackgroundColor="cadetblue" CornerRadius="7" />
-            <Button Grid.Row="1" Grid.Column="0" Text="List View" BackgroundColor="cadetblue" CornerRadius="7" />
-            <Button Grid.Row="1" Grid.Column="1" Text="Controls" BackgroundColor="CadetBlue" CornerRadius="7" />
-            <Button Grid.Row="2" Grid.Column="0" Text="SQLite" BackgroundColor="CadetBlue" HeightRequest="80" CornerRadius="7" />
+            <Button Grid.Row="0" Grid.Column="0" Text="Layouts" BackgroundColor="cadetblue" CornerRadius="7" Command="{Binding OnLayoutClicked}"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="Image" BackgroundColor="cadetblue" CornerRadius="7" Command="{Binding OnImageClicked}"/>
+            <Button Grid.Row="1" Grid.Column="0" Text="List View" BackgroundColor="cadetblue" CornerRadius="7" Command="{Binding OnListClicked}"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="Controls" BackgroundColor="CadetBlue" CornerRadius="7" Command="{Binding OnControlsClicked}"/>
+            <Button Grid.Row="2" Grid.Column="0" Text="SQLite" BackgroundColor="CadetBlue" HeightRequest="80" CornerRadius="7" Command="{Binding OnSQLiteClicked}"/>
 
         </Grid>
         
