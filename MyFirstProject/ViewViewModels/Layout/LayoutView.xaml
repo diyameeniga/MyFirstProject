@@ -8,6 +8,25 @@
         <Label Text="Welcome to Xamarin.Forms!"
             VerticalOptions="CenterAndExpand" 
             HorizontalOptions="CenterAndExpand" />
+        
+        <Grid Margin="25, 25, 30, 20">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="180" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Text="Absolute" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnAbsoluteClicked}"/>
+         
+        </Grid>
+
     </StackLayout>
 
 </ContentPage>
