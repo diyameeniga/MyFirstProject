@@ -5,10 +5,7 @@
              Title="{Binding Title}">
 
     <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!"
-            VerticalOptions="CenterAndExpand" 
-            HorizontalOptions="CenterAndExpand" />
-        
+
         <Grid Margin="25, 25, 30, 20">
 
             <Grid.RowDefinitions>

@@ -1,5 +1,6 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
+using MyFirstProject.ViewViewModels.Layout.Absolute;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -16,7 +17,7 @@ namespace MyFirstProject.ViewViewModels.Layout
 
         private async void OnAbsoluteClickedAsync(object obj)
         {
-            //await Application.Current.MainPage.Navigation.PushAsync(new AbsoluteView());
+           await Application.Current.MainPage.Navigation.PushAsync(new Absolute_View());
         }
 
 

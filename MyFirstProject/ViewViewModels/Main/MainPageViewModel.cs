@@ -34,7 +34,6 @@ namespace MyFirstProject.ViewViewModels.Main
             Title = Titles.MainPageTitle;
             Subtitle = Titles.MainPageSubtitle;
 
-
             OnLayoutClicked = new Command(OnLayoutClickedAsync);
             OnControlsClicked = new Command(OnControlsClickedAsync);
             OnImageClicked = new Command(OnImageClickedAsync);
