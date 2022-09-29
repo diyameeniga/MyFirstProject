@@ -18,9 +18,12 @@
                 <ColumnDefinition Width="180" />
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="0" Grid.Column="0" Text="Absolute" 
+            <Button Grid.Row="0" Grid.Column="0" Text="Absolute View" 
                     BackgroundColor="cadetblue" CornerRadius="7" 
                     Command="{Binding OnAbsoluteClicked}"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="Absolute Page" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnAbsolutePageClicked}"/>
          
         </Grid>
 

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModels.Layout.Absolute.AbsolutePage.AbsolutePage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            
+            <!-- first row -->
+            <Label Text="23" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.2,0.3,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="Violet"/>
+            <Label Text="49" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.4,0.3,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" 
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="Moccasin"/>
+            <Label Text="55" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.6,0.3,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="PaleVioletRed"/>
+            <Label Text="68" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.8,0.3,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="LightCoral"/>
+
+            <!-- second row -->
+            <Label Text="71" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.2,0.4,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional" 
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="green"/>
+            <Label Text="12" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.4,0.4,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="LimeGreen"/>
+            <Label Text="104" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.6,0.4,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="Teal"/>
+            <Label Text="90" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.8,0.4,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="LightGreen"/>
+
+            <!-- third row -->
+            <Label Text="13" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.2,0.5,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="cadetblue"/>
+            <Label Text="26" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.4,0.5,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="CornflowerBlue"/>
+            <Label Text="82" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.6,0.5,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="DarkSlateBlue"/>
+            <Label Text="41" TextColor="Black"
+                 AbsoluteLayout.LayoutBounds="0.8,0.5,50,40"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="DodgerBlue"/> 
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

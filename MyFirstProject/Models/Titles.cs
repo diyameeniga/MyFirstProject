@@ -14,6 +14,7 @@ namespace MyFirstProject.Models
         public static string ImageViewTitle { get; } = "Image Page";
         public static string ControlsViewTitle { get; } = "Controls Page";
         public static string SQLiteViewTitle { get; } = "SQLite Page";
+        public static string AbsolutePageTitle { get; } = "Absolute Page";
         public static string AbsoluteViewTitle { get; } = "Absolute View - Proportional Demo";
     }
 }
