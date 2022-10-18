@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModels.Layout.Relative.RelativePage.RelativePage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <RelativeLayout BackgroundColor="GreenYellow">
+
+            <Label Text="Relative Layout" FontSize="20" TextColor="Black"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, 
+						Constant=130}"
+				   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+						Constant=100}" />
+
+            <BoxView Color="Pink"
+				   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, 
+						Constant=100}"
+				   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+						Constant=200}" />
+            <BoxView Color="DarkOrange"
+				   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+						Property=Width, Constant=-100}"
+				   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,
+						Property=Height, Constant=100}" />
+            <BoxView Color="Teal"
+				   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+						Property=Width, Constant=-150}"
+				   RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, 
+						Property=Height, Constant=200}" />
+            <BoxView x:Name="green" Color="red"
+				   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+						Property=Width, Constant=-150}"
+				    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+						Property=Height, Constant=-380}" />
+            <BoxView Color="Lavender"
+				 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+					ElementName=green, Property=X, Factor=1.035}"
+				 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+					ElementName=green, Property=Y, Factor=1.03}"
+				 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,
+					ElementName=green, Property=Width, Factor=0.5}"
+				 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView,
+					ElementName=green, Property=Height, Factor=0.5}" />
+
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
