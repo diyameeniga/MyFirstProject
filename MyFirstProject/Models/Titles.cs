@@ -23,5 +23,10 @@ namespace MyFirstProject.Models
 
         //IMAGE TITLES
         public static string ImageURITitle { get; } = "URI Image Page";
+        public static string EmbeddedImageTitle { get; } = "Embedded Image View";
+        public static string ActivityIndicatorTitle { get; } = "Activity Indicator";
+
+        //LIST TITLES
+        public static string CollectionViewTitle { get; } = "Collection View";
     }
 }

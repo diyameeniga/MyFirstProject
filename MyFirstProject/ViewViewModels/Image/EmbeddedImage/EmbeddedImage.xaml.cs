@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.Image.ImageURI
+namespace MyFirstProject.ViewViewModels.Image.EmbeddedImage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 
-    public partial class ImageURI : ContentPage
+    public partial class EmbeddedImageView : ContentPage
     {
-        public ImageURI()
+        public EmbeddedImageView()
         {
             InitializeComponent();
-            this.BindingContext = new ImageURIModel();
+            this.BindingContext = new EmbeddedImageViewModel();
         }
     }
 }

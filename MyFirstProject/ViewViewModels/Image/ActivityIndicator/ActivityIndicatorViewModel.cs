@@ -5,15 +5,15 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace MyFirstProject.ViewViewModels.Image.ImageURI
+namespace MyFirstProject.ViewViewModels.Image.ActivityIndicator
 {
-    class ImageURIModel : BaseViewModel
+    class ActivityIndicatorViewModel : BaseViewModel
     {
         public ImageSource ImageSrc { get; set; }
 
-        public ImageURIModel()
+        public ActivityIndicatorViewModel()
         {
-            Title = Titles.ImageURITitle;
+            Title = Titles.ActivityIndicatorTitle;
             ImageSrc = this.SetImageSrc();
         }
 

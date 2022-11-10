@@ -22,6 +22,14 @@
                     BackgroundColor="cadetblue" CornerRadius="7" 
                     Command="{Binding OnURIClicked}"/>
 
+                <Button Grid.Row="0" Grid.Column="1" Text="Embedded Image View" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnEmbeddedClicked}"/>
+
+                <Button Grid.Row="1" Grid.Column="0" Text="Activity Indicator" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnActivityClicked}"/>
+
             </Grid>
             
         </StackLayout>

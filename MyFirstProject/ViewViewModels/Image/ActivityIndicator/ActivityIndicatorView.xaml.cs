@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.Image.ImageURI
+namespace MyFirstProject.ViewViewModels.Image.ActivityIndicator
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-
-    public partial class ImageURI : ContentPage
+    public partial class ActivityIndicatorView : ContentPage
     {
-        public ImageURI()
+        public ActivityIndicatorView()
         {
             InitializeComponent();
-            this.BindingContext = new ImageURIModel();
+            this.BindingContext = new ActivityIndicatorViewModel();
         }
     }
 }

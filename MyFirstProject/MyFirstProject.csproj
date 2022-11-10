@@ -20,6 +20,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Images\placeimg_640_480_tech.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\placeimg_640_480_tech.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
@@ -29,6 +37,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="ViewViewModels\Image\EmbeddedImage\EmbeddedImage.xaml.cs">
+      <DependentUpon>EmbeddedImage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="ViewViewModels\Layout\Absolute\AbsoluteView.xaml.cs">
       <DependentUpon>AbsoluteView.xaml</DependentUpon>
     </Compile>
@@ -36,6 +47,12 @@
 
   <ItemGroup>
     <EmbeddedResource Update="ViewViewModels\Controls\ControlsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\Image\ActivityIndicator\ActivityIndicatorView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\Image\EmbeddedImage\EmbeddedImage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Image\ImageURI\ImageURI.xaml">
@@ -62,11 +79,20 @@
     <EmbeddedResource Update="ViewViewModels\Layout\Relative\RelativeView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\List\Collection\Collection_ViewView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\List\ListViewView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\SQLite\SQLiteView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ViewViewModels\List\Collection\Collection_ViewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>
