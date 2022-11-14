@@ -24,6 +24,7 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
+                        <!-- Code for Just List-->
                         <StackLayout Padding="10" x:DataType="model:Person">
                         <Label Text="{Binding Name}"
                                        Grid.Column="0"
@@ -34,10 +35,10 @@
                             
                         </StackLayout>
 
-                    <StackLayout Padding="10" x:DataType="model:Images">
-                       <!-- <Image Source="{Binding ImageSrc}" /> -->
+                    <!-- <StackLayout Padding="10" x:DataType="model:Images">
+                       <Image Source="{Binding ImageSrc}" /> 
 
-                    </StackLayout>
+                    </StackLayout> -->
 
                 </Grid>
 

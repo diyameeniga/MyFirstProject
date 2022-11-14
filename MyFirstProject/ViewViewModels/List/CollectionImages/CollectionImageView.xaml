@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MyFirstProject.Models"
+             x:Class="MyFirstProject.ViewViewModels.List.CollectionImages.CollectionImageView"
+             Title="{Binding Title}">
+
+    <StackLayout>
+
+        <Label Text="Sports" FontSize="30" TextColor="Black" HorizontalTextAlignment="Center"/>
+
+        <CollectionView x:Name="NamesListView"
+                            ItemsSource="{Binding PersonsCollection}"
+                            SelectionMode="None"
+                            ItemsLayout="VerticalList">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid Padding="10" Margin="12">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Code for Just List-->
+                        <StackLayout Padding="10" x:DataType="model:Person">
+                        <Grid Padding="10" Margin="12">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Name}"
+                                       Grid.Column="1"
+                                       Grid.Row="0"
+                                       LineBreakMode="NoWrap"
+                                       FontSize="16"
+                                       FontAttributes="Bold" />
+
+                            <Label Text="{Binding Player}"
+                                       Grid.Column="1"
+                                       Grid.Row="0"
+                                       LineBreakMode="NoWrap"
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                   VerticalTextAlignment="start"
+                                   TranslationY="20"/>
+
+                            <Image Source="{Binding URL}"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Aspect="AspectFill"/>
+                        </Grid>
+                    </StackLayout>
+
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

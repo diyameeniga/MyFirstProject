@@ -21,6 +21,9 @@
             <Button Grid.Row="0" Grid.Column="0" Text="Collection View" 
                     BackgroundColor="cadetblue" CornerRadius="7" 
                     Command="{Binding OnCollectionClicked}"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="Collection View with Images" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnCollectionImageClicked}"/>
         </Grid>
         
     </StackLayout>
