@@ -29,6 +29,7 @@ namespace MyFirstProject.Models
         //LIST TITLES
         public static string CollectionViewTitle { get; } = "Collection View";
         public static string CollectionImageViewTitle { get; } = "Collection View with Images";
-        
+        public static string MovieCollectionTitle { get; } = "Movie Collection (List Buttons Page)";
+
     }
 }

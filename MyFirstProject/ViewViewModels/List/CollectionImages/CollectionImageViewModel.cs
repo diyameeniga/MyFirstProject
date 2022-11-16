@@ -15,6 +15,7 @@ namespace MyFirstProject.ViewViewModels.List.CollectionImages
         public ObservableCollection<Person> PersonsCollection { get; }
 
         private List<Person> _personList;
+
         public CollectionImageViewModel()
         {
             Title = Titles.CollectionImageViewTitle;
@@ -38,8 +39,6 @@ namespace MyFirstProject.ViewViewModels.List.CollectionImages
             {
                 Debug.WriteLine(ex);
             }
-        }
-
-        
+        } 
     }
 }

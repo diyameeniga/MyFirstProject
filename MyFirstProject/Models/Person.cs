@@ -13,10 +13,7 @@ namespace MyFirstProject.Models
 
         public ImageSource URL { get; set; }
 
-        public Person()
-        {
-
-        }
+        public Person() {}
         public Person(string name)
         {
             Name = name;
@@ -59,13 +56,7 @@ namespace MyFirstProject.Models
                 new Person("Gymnastics"),
                 new Person("Dance"),
                 
-             /*   new Person("Loks Mareddee"),
-                new Person("Ani Vadayar"),
-                new Person("Divvy Kotakota"),
-                new Person("Illia MyKing"),
-                new Person("Justinian Lopato"), */
             };
         }
-
     }
 }
