@@ -20,10 +20,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Images\iconsdelete.png" />
+    <None Remove="Images\iconsedit.png" />
     <None Remove="Images\placeimg_640_480_tech.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\iconsdelete.png" />
+    <EmbeddedResource Include="Images\iconsedit.png" />
     <EmbeddedResource Include="Images\placeimg_640_480_tech.jpg" />
   </ItemGroup>
 
@@ -80,6 +84,15 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\List\CollectionImages\CollectionImageView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\List\CollectionImages\MovieCollection\AddMoviesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\List\CollectionImages\MovieCollection\EditMovies\Edit_Movies_View.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\List\CollectionImages\MovieCollection\MovieCollectionIconsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\List\CollectionImages\MovieCollection\MovieCollectionView.xaml">

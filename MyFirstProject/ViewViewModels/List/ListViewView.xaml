@@ -27,6 +27,9 @@
             <Button Grid.Row="1" Grid.Column="0" Text="Movie Collection" 
                     BackgroundColor="cadetblue" CornerRadius="7" 
                     Command="{Binding OnMovieCollectionClicked}"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="Movie Collection Icons" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnMovieCollectionIconsClicked}"/>
         </Grid>
         
     </StackLayout>

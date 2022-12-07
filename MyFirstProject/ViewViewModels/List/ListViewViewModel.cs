@@ -18,13 +18,16 @@ namespace MyFirstProject.ViewViewModels.List
         public ICommand OnCollectionImageClicked { get; set; }
 
         public ICommand OnMovieCollectionClicked { get; set; }
-        
+       
+        public ICommand OnMovieCollectionIconsClicked { get; set; }
+
         public ListViewViewModel()
         {
             Title = Titles.ListViewTitle;
             OnCollectionClicked = new Command(OnCollectionClickedAsync);
             OnCollectionImageClicked = new Command(OnCollectionImageClickedAsync);
             OnMovieCollectionClicked = new Command(OnMovieCollectionClickedAsync);
+            OnMovieCollectionIconsClicked = new Command(OnMovieCollectionClickedAsync);
         }
 
         private async void OnCollectionClickedAsync(object obj)
@@ -40,6 +43,10 @@ namespace MyFirstProject.ViewViewModels.List
         private async void OnMovieCollectionClickedAsync(object obj)
         {
             await Application.Current.MainPage.Navigation.PushAsync(new MovieCollectionView());
+        }
+        private async void OnMovieCollectionIconsClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new MovieCollectionIconsView());
         }
     }
 }

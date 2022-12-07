@@ -10,13 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MovieCollectionView : ContentPage
+    public partial class MovieCollectionIconsView : ContentPage
     {
-        public MovieCollectionView()
+        public MovieCollectionIconsView()
         {
             InitializeComponent();
-            this.BindingContext = new MovieCollectionViewModel();
-            
+            this.BindingContext = new MovieCollectionIconsViewModel();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFirstProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MovieCollectionView : ContentPage
+    public partial class AddMoviesView : ContentPage
     {
-        public MovieCollectionView()
+        public AddMoviesView()
         {
             InitializeComponent();
-            this.BindingContext = new MovieCollectionViewModel();
-            
+            BindingContext = new AddMovieViewModel();
         }
     }
 }

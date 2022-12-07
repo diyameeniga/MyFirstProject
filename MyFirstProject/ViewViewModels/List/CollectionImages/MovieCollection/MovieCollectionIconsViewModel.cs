@@ -10,14 +10,13 @@ using Xamarin.Forms;
 
 namespace MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection
 {
-    class MovieCollectionViewModel: BaseViewModel
+    class MovieCollectionIconsViewModel: BaseViewModel
     {
-
         private List<Movies> _movie;
         private ObservableCollection<Movies> _movies;
 
-      //  public ImageSource EditImageSrc { get; set; }
-      //  public ImageSource DeleteImageSrc { get; set; }
+        public ImageSource EditImageSrc { get; set; }
+        public ImageSource DeleteImageSrc { get; set; }
         public ObservableCollection<Movies> MovieCollection
         {
             get
@@ -31,15 +30,15 @@ namespace MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection
             }
         }
 
-        public MovieCollectionViewModel()
+        public MovieCollectionIconsViewModel()
         {
-            Title = Titles.MovieCollectionTitle; //BOTH HAVE THE SAME TITLE
+            Title = Titles.MovieCollectionIconsTitle; //WHY IS THE TITLE NOT CHANGING?!?!!??!
             MovieCollection = new ObservableCollection<Movies>();
             _movie = Movies.GetMovies();
             this.LoadMovies();
 
-           // EditImageSrc = ImageSource.FromResource("MyFirstProject.Images.iconsedit.png");
-            //DeleteImageSrc = ImageSource.FromResource("MyFirstProject.Images.iconsdelete.png");
+            EditImageSrc = ImageSource.FromResource("MyFirstProject.Images.iconsedit.png");
+            DeleteImageSrc = ImageSource.FromResource("MyFirstProject.Images.iconsdelete.png");
         }
 
         private void LoadMovies()
