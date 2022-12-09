@@ -27,7 +27,7 @@ namespace MyFirstProject.ViewViewModels.List
             OnCollectionClicked = new Command(OnCollectionClickedAsync);
             OnCollectionImageClicked = new Command(OnCollectionImageClickedAsync);
             OnMovieCollectionClicked = new Command(OnMovieCollectionClickedAsync);
-            OnMovieCollectionIconsClicked = new Command(OnMovieCollectionClickedAsync);
+            OnMovieCollectionIconsClicked = new Command(OnMovieCollectionIconsClickedAsync);
         }
 
         private async void OnCollectionClickedAsync(object obj)

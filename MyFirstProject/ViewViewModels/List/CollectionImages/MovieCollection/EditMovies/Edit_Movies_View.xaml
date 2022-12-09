@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection.EditMovies.Edit_Movies_View">
     <ContentPage.Content>
+        
         <StackLayout Padding="5">
 
             <Label Text="Movie Title"
@@ -23,5 +24,6 @@
                     x:Name="saveBtn" />
 
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

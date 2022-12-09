@@ -12,9 +12,11 @@ namespace MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection
     {
         public ICommand UpdateClicked { get; set; }
         private string _movieText = string.Empty;
+
         public EditMoviesViewModel()
         {
             Title = Titles.EditTitle;
+
             UpdateClicked = new Command(PerformSave);
         }
 

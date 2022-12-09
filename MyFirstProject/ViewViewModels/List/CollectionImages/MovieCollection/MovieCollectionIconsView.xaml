@@ -24,7 +24,7 @@
         <RefreshView x:DataType="local:MovieCollectionIconsView" 
                         IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
 
-            <CollectionView x:DataType="local:MovieCollectionViewModel" x:Name="ItemsListView"
+            <CollectionView x:DataType="local:MovieCollectionIconsViewModel" x:Name="ItemsListView"
                             ItemsSource="{Binding MovieCollection, Mode=TwoWay}"
                             SelectionMode="None"
                             ItemsLayout="VerticalList">

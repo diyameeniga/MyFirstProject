@@ -17,6 +17,7 @@ namespace MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection
 
         public ImageSource EditImageSrc { get; set; }
         public ImageSource DeleteImageSrc { get; set; }
+       
         public ObservableCollection<Movies> MovieCollection
         {
             get
@@ -32,7 +33,7 @@ namespace MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection
 
         public MovieCollectionIconsViewModel()
         {
-            Title = Titles.MovieCollectionIconsTitle; //WHY IS THE TITLE NOT CHANGING?!?!!??!
+            Title = Titles.MovieCollectionIconsTitle;
             MovieCollection = new ObservableCollection<Movies>();
             _movie = Movies.GetMovies();
             this.LoadMovies();
@@ -44,6 +45,7 @@ namespace MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection
         private void LoadMovies()
         {
             IsBusy = true;
+
             try
             {
                 _movies.Clear();
