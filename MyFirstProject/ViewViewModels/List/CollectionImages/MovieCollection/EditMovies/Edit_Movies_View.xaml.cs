@@ -17,7 +17,7 @@ namespace MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection.Ed
         {
             InitializeComponent();
             BindingContext = new EditMoviesViewModel();
-            Title.Text = mov.Title;
+            Title.Text = mov.MovieName;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace MyFirstProject.ViewViewModels.List.CollectionImages.MovieCollection
     {
         public ICommand SaveBtnClicked { get; set; }
         private string _movieText = string.Empty;
-
+        
         public AddMovieViewModel()
         {
             Title = Titles.AddTitle;

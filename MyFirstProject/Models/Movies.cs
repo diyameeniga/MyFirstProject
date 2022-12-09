@@ -34,7 +34,7 @@ namespace MyFirstProject.Models
         {
             return new List<Movies>
             {
-                new Movies("The Lord of the Rings"), //need to fix this; when i add or save the names don't show up
+                new Movies("The Lord of the Rings"),
                 new Movies("Black Panther"),
                 new Movies("Iron Man"),
                 new Movies("Spiderman"),
