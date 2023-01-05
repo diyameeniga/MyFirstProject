@@ -5,9 +5,29 @@
              Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+            <Grid Margin="25, 25, 30, 20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="180" />
+                    <ColumnDefinition Width="180" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" Text="Slider" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnSliderClicked}"/>
+
+                <Button Grid.Row="0" Grid.Column="1" Text="Stepper" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnStepperClicked}"/>
+
+            </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

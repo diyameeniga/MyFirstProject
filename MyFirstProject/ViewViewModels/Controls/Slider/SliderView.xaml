@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModels.Controls.Slider.SliderView"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout BindingContext="{x:Reference slider}"
+                         HorizontalOptions="FillAndExpand" >
+
+                <BoxView Color="CadetBlue"
+                         Opacity="{Binding Value}" />
+
+                <StackLayout HorizontalOptions="Center" >
+                    <Label Text="{Binding Value,
+                        StringFormat='Value of the Slider is {0:F2}'}"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           Opacity="{Binding Value}" />
+                </StackLayout>
+
+                <Slider x:Name="slider" Value="0.5" 
+                        ThumbColor="cadetblue"
+                        MinimumTrackColor="green"
+                        MaximumTrackColor="purple" />
+                
+            </StackLayout>
+
+            <Label Text="Moving Slider Will Change Opacity"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="Medium" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

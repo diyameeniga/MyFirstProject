@@ -33,5 +33,10 @@ namespace MyFirstProject.Models
         public static string MovieCollectionIconsTitle { get; } = "Movie Collection Icons";
         public static string EditTitle { get; } = "Edit Title";
         public static string AddTitle { get; } = "Add Title";
+
+        //CONTROLS TITLES
+        public static string SliderViewTitle { get; } = "Slider View";
+        public static string StepperViewTitle { get; } = "Stepper View";
+
     }
 }
