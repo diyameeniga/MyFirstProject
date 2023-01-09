@@ -37,6 +37,8 @@ namespace MyFirstProject.Models
         //CONTROLS TITLES
         public static string SliderViewTitle { get; } = "Slider View";
         public static string StepperViewTitle { get; } = "Stepper View";
-
+        public static string SwitchViewTitle { get; } = "Switch View";
+        public static string SwitchTwoViewTitle { get; } = "Switch Two View";
+        public static string EntryViewTitle { get; } = "Entry View";
     }
 }

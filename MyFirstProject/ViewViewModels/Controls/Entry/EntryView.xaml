@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModels.Controls.Entry.EntryView"
+             Title="{Binding Title}" >
+    
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+
+            <Entry Placeholder="Enter Text Here"
+                   PlaceholderColor="blue"
+                   x:Name="EntryValue"
+                   Text="{Binding EntryText}"
+                   TextColor="red"
+                   WidthRequest="300"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Submit"
+                    HorizontalOptions="Center"
+                    FontAttributes="Bold"
+                    TextColor="white"
+                    BackgroundColor="blue"
+                    Command="{Binding OnEntryClicked}" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

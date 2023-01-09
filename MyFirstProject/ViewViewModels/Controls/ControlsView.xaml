@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstProject.ViewViewModels.Controls.ControlsView"
              Title="{Binding Title}">
+    
     <ContentPage.Content>
         <StackLayout>
             
@@ -25,6 +26,18 @@
                 <Button Grid.Row="0" Grid.Column="1" Text="Stepper" 
                     BackgroundColor="cadetblue" CornerRadius="7" 
                     Command="{Binding OnStepperClicked}"/>
+
+                <Button Grid.Row="1" Grid.Column="0" Text="Switch" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnSwitchClicked}"/>
+
+                <Button Grid.Row="1" Grid.Column="1" Text="Switch Two" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnSwitchTwoClicked}"/>
+                
+                <Button Grid.Row="2" Grid.Column="0" Text="Entry" 
+                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    Command="{Binding OnEntryClicked}"/>
 
             </Grid>
 

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstProject.ViewViewModels.Controls.Stepper.StepperView"
              Title="{Binding Title}">
+    
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="_rotatingLabel"
@@ -29,4 +30,5 @@
 
         </StackLayout>
     </ContentPage.Content>
+    
 </ContentPage>
