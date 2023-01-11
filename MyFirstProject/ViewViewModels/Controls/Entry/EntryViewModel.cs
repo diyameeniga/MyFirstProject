@@ -35,9 +35,11 @@ namespace MyFirstProject.ViewViewModels.Controls.Entry
         {
             if(string.IsNullOrEmpty(_entryText.Trim()))
             {
-                await Application.Current.MainPage.DisplayAlert(Titles.EntryViewTitle, "Entry can't be empty!", "Ok");
+                await Application.Current.MainPage.DisplayAlert(Titles.EntryViewTitle, "Entry can't be empty :o", "Ok");
                 return;
             }
+
+            await Application.Current.MainPage.Navigation.PushAsync(new ResultsView(EntryText));
         }
     }
 }

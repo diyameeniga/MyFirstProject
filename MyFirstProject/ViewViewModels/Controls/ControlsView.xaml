@@ -36,7 +36,7 @@
                     Command="{Binding OnSwitchTwoClicked}"/>
                 
                 <Button Grid.Row="2" Grid.Column="0" Text="Entry" 
-                    BackgroundColor="cadetblue" CornerRadius="7" 
+                    BackgroundColor="cadetblue" CornerRadius="7" HeightRequest="80"
                     Command="{Binding OnEntryClicked}"/>
 
             </Grid>

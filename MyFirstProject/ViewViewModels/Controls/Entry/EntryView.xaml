@@ -15,7 +15,7 @@
                    WidthRequest="300"
                    HorizontalOptions="Center" />
 
-            <Button Text="Submit"
+            <Button Text="Go To Result Page"
                     HorizontalOptions="Center"
                     FontAttributes="Bold"
                     TextColor="white"

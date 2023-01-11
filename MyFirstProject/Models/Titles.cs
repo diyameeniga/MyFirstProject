@@ -40,5 +40,6 @@ namespace MyFirstProject.Models
         public static string SwitchViewTitle { get; } = "Switch View";
         public static string SwitchTwoViewTitle { get; } = "Switch Two View";
         public static string EntryViewTitle { get; } = "Entry View";
+        public static string ResultsViewTitle { get; } = "Results View";
     }
 }
