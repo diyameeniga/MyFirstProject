@@ -41,5 +41,7 @@ namespace MyFirstProject.Models
         public static string SwitchTwoViewTitle { get; } = "Switch Two View";
         public static string EntryViewTitle { get; } = "Entry View";
         public static string ResultsViewTitle { get; } = "Results View";
+        public static string PickerViewTitle { get; } = "Picker XAML View";
+        public static string PickerMenuViewTitle { get; } = "Picker Menu View";
     }
 }

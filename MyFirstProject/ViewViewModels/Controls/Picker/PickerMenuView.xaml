@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModels.Controls.Picker.PickerMenuView"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Padding="0,20">
+            <Label Text="Picker Menu"
+                   FontSize="Large"
+                   FontAttributes="Bold" 
+                   HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="CenterAndExpand">
+
+                <Button BackgroundColor="Transparent"
+                        ImageSource="{Binding PickerButton}"
+                        Command="{Binding OnSubmitClicked}" />
+                
+                <Picker>
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>2018 Audi S3</x:String>
+                            <x:String>2019 Audi A4</x:String>
+                            <x:String>2020 Audi Q5</x:String>
+                            <x:String>2021 Audi Q7</x:String>
+                            <x:String>2022 Audi R8</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModels.Controls.Picker.PickerView"
+             Title="{Binding Title}"
+             BackgroundColor="BlanchedAlmond">
+    <ContentPage.Content>
+        <StackLayout Padding="0,20">
+            <Label Text="Audi XAML Catalog"
+                   FontSize="Large"
+                   FontAttributes="Bold" 
+                   HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="CenterAndExpand">
+
+                <Picker x:Name="pickerXAML"
+                        Title="Select a Car"
+                        TitleColor="DarkRed"
+                        SelectedItem="{Binding SelectedItem}"
+                        VerticalOptions="FillAndExpand"
+                        WidthRequest="300">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>2018 Audi S3</x:String>
+                            <x:String>2019 Audi A4</x:String>
+                            <x:String>2020 Audi Q5</x:String>
+                            <x:String>2021 Audi Q7</x:String>
+                            <x:String>2022 Audi R8</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Button BackgroundColor="Transparent"
+                        ImageSource="{Binding SubmitButton}"
+                        Command="{Binding OnSubmitClicked}" />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

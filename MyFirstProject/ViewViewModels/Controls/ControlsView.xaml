@@ -39,6 +39,14 @@
                     BackgroundColor="cadetblue" CornerRadius="7" HeightRequest="80"
                     Command="{Binding OnEntryClicked}"/>
 
+                <Button Grid.Row="2" Grid.Column="1" Text="Picker XAML" 
+                    BackgroundColor="cadetblue" CornerRadius="7" HeightRequest="80"
+                    Command="{Binding OnPickerClicked}"/>
+
+                <Button Grid.Row="3" Grid.Column="0" Text="Picker Menu" 
+                    BackgroundColor="cadetblue" CornerRadius="7" HeightRequest="80"
+                    Command="{Binding OnPickerMenuClicked}"/>
+
             </Grid>
 
         </StackLayout>
