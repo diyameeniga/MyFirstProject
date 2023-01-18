@@ -28,17 +28,10 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
             {
                 return new Command(() =>
                 {
-                    //Application.Current.MainPage.Navigation.PushAsync(new PickerView());
+                    Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView());
 
-                  /*  MessagingCenter.Subscribe<Movies>(this, "AddMovies", async (data) =>
-                    {
-                        MovieCollection.Add(data);
-
-                        MessagingCenter.Unsubscribe<Movies>(this, "AddMovies");
-                    }); */
                 });
             }
         }
-
     }
 }

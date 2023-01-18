@@ -66,6 +66,9 @@
     <EmbeddedResource Update="ViewViewModels\Controls\Picker\PickerMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\Controls\Picker\PickerResultsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Controls\Picker\PickerView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
