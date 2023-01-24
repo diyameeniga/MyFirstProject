@@ -8,7 +8,6 @@ namespace MyFirstProject.Models
     class Cars
     {
         public string Name { get; set; }
-
         public ImageSource URL { get; set; }
 
         public Cars() { }

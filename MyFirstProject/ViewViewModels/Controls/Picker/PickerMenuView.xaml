@@ -13,11 +13,15 @@
             <StackLayout VerticalOptions="CenterAndExpand"
                          HorizontalOptions="CenterAndExpand">
 
-                <Button BackgroundColor="Transparent"
+                    <Button BackgroundColor="Transparent"
                         ImageSource="{Binding PickerButton}"
                         Command="{Binding OnSubmitClicked}" />
 
-            </StackLayout>
+                    <Button BackgroundColor="Transparent"
+                        ImageSource="{Binding PickerVMButton}"
+                        Command="{Binding OnVMSubmitClicked}" />
+                  
+             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

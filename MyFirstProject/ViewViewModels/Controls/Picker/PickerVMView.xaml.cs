@@ -10,15 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace MyFirstProject.ViewViewModels.Controls.Picker
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PickerResultsView : ContentPage
+    public partial class PickerVMView : ContentPage
     {
-        public PickerResultsView(string name, string image)
+        public PickerVMView()
         {
             InitializeComponent();
-            this.BindingContext = new PickerResultsViewModel();
-
-            resultLabel.Text = name;
-            resultImage.Source = image;
+            this.BindingContext = new PickerVMViewModel();
         }
     }
 }

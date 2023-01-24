@@ -6,9 +6,20 @@
     
     <ContentPage.Content>
 
-        <Label Text="Hello">
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center">
+
+            <Label Text="Results From Picker VM"
+               FontSize="Large"
+               FontAttributes="Bold" />
+
+            <Label x:Name="resultLabel" />
+
+            <Image x:Name="resultImage" />
             
-        </Label>
+        </StackLayout>
+        
+            
         <!-- <StackLayout Padding="0,20">
             <Label Text="Picker VM!"
                    FontSize="Large"

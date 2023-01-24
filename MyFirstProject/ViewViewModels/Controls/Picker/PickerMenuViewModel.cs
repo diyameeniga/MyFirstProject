@@ -10,6 +10,7 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
     class PickerMenuViewModel: BaseViewModel
     {
         public ImageSource PickerButton { get; set; }
+        public ImageSource PickerVMButton { get; set; }
         public PickerMenuViewModel()
         {
             Title = Titles.PickerMenuViewTitle;
@@ -20,6 +21,8 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
         private void GetEmbeddedImageSrc()
         {
             PickerButton = ImageSource.FromResource("MyFirstProject.Images.buttonred.png");
+            PickerVMButton = ImageSource.FromResource("MyFirstProject.Images.buttonblue.png");
+
         }
 
         public Command OnSubmitClicked
@@ -29,6 +32,18 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
                 return new Command(() =>
                 {
                     Application.Current.MainPage.Navigation.PushAsync(new PickerView());
+
+                });
+            }
+        }
+
+        public Command OnVMSubmitClicked
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Application.Current.MainPage.Navigation.PushAsync(new PickerVMView());
 
                 });
             }

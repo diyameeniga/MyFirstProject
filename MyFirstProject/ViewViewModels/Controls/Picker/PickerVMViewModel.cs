@@ -2,21 +2,23 @@
 using MyFirstProject.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 
 namespace MyFirstProject.ViewViewModels.Controls.Picker
 {
-    class PickerViewModel: BaseViewModel
+    class PickerVMViewModel: BaseViewModel
     {
         public ImageSource SubmitButton { get; set; }
         public string _selectedItem = string.Empty;
-
-        public PickerViewModel()
+        public List<String> CarsList { get; set; }
+        public PickerVMViewModel()
         {
-            Title = Titles.PickerViewTitle;
+            Title = Titles.PickerVMViewTitle;
 
             GetEmbeddedImageSrc();
+            SetCarsList();
         }
 
         private void GetEmbeddedImageSrc()
@@ -30,10 +32,21 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
             {
                 return new Command(() =>
                 {
-                    Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(_selectedItem, null));
+                   // Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(_selectedItem, getURLS()));
 
                 });
             }
+        }
+
+        private void SetCarsList()
+        {
+            List<Cars> names = new List<Cars>();
+            names = Cars.getNames();
+
+            var cars = Cars.getNames();
+
+            CarsList = (from c in cars
+                        select c.Name).ToList();
         }
 
         public string SelectedItem
