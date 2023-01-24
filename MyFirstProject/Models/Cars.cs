@@ -5,13 +5,18 @@ using Xamarin.Forms;
 
 namespace MyFirstProject.Models
 {
-    class Cars
+    public class Cars
     {
         public string Name { get; set; }
         public ImageSource URL { get; set; }
 
         public Cars() { }
-        public Cars(string name) {}
+
+        public Cars(string name) 
+        {
+            Name = name;
+        }
+
         public Cars(string name, string url) 
         {
             Name = name;
@@ -29,6 +34,7 @@ namespace MyFirstProject.Models
                 new Cars("2022 Audi R8", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.motortrend.com%2Freviews%2F2022-audi-r8-v10-performance-rwd-first-test-review%2F&psig=AOvVaw0ICoCtINtPHHLT_MoN2Cb_&ust=1674144861213000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMiRv-DB0fwCFQAAAAAdAAAAABAD" ),
             };
         }
+
         private ImageSource SetImageSrc(string picture)
         {
             var imgsrc = new UriImageSource { Uri = new Uri(picture) };
@@ -37,6 +43,7 @@ namespace MyFirstProject.Models
 
             return imgsrc;
         }
+
         public static List<Cars> getNames()
         {
             return new List<Cars>

@@ -13,12 +13,13 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
         public ImageSource SubmitButton { get; set; }
         public string _selectedItem = string.Empty;
         public List<String> CarsList { get; set; }
+
         public PickerVMViewModel()
         {
             Title = Titles.PickerVMViewTitle;
 
-            GetEmbeddedImageSrc();
-            SetCarsList();
+            this.GetEmbeddedImageSrc();
+            this.SetCarsList();
         }
 
         private void GetEmbeddedImageSrc()
@@ -40,9 +41,6 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
 
         private void SetCarsList()
         {
-            List<Cars> names = new List<Cars>();
-            names = Cars.getNames();
-
             var cars = Cars.getNames();
 
             CarsList = (from c in cars
