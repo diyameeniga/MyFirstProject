@@ -13,36 +13,15 @@
                FontSize="Large"
                FontAttributes="Bold" />
 
-            <Label x:Name="resultLabel" />
+            <Label x:Name="resultLabel" 
+               FontSize="Medium"
+               FontAttributes="Bold"/>
 
-            <Image x:Name="resultImage" />
-            
+            <Image x:Name="resultImage" 
+                   Source="{Binding ImageSource}"
+                   Aspect="AspectFill"/>
+
         </StackLayout>
-        
-            
-        <!-- <StackLayout Padding="0,20">
-            <Label Text="Picker VM!"
-                   FontSize="Large"
-                   FontAttributes="Bold"
-                   TextColor="Blue"
-                   HorizontalOptions="CenterAndExpand"/>
-
-            <StackLayout VerticalOptions="CenterAndExpand"
-                         HorizontalOptions="CenterAndExpand" >
-                <Picker x:Name="pickerVM"
-                        Title="Select a Character"
-                        TitleColor="darkred"
-                        SelectedIndex="{Binding SelectedItem}"
-                        VerticalOptions="FillAndExpand"
-                        ItemsSource="{Binding CarsList}" >
-                </Picker>
-                      
-                <Button BackgroundColor="Transparent"
-                        ImageSource="{Binding SubmitButton}"
-                        Command="{Binding OnSubmitClicked}" />
-            </StackLayout>
-
-        </StackLayout> -->
             
     </ContentPage.Content>
 </ContentPage>

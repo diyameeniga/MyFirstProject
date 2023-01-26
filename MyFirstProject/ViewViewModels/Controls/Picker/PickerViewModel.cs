@@ -31,7 +31,6 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
                 return new Command(() =>
                 {
                     Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(_selectedItem, null));
-
                 });
             }
         }

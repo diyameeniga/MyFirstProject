@@ -46,6 +46,11 @@
                 <Button Grid.Row="3" Grid.Column="0" Text="Picker Menu" 
                     BackgroundColor="cadetblue" CornerRadius="7" HeightRequest="80"
                     Command="{Binding OnPickerMenuClicked}"/>
+                
+                <Button Grid.Row="3" Grid.Column="1" Text="Date Picker" 
+                    BackgroundColor="cadetblue" CornerRadius="7" HeightRequest="80"
+                    Command="{Binding OnDatePickerClicked}"/>
+
 
             </Grid>
 

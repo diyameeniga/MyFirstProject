@@ -12,6 +12,7 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
     {
         public ImageSource SubmitButton { get; set; }
         public string _selectedItem = string.Empty;
+        public ImageSource _selectedCar { get; set; }
         public List<String> CarsList { get; set; }
 
         public PickerVMViewModel()
@@ -27,14 +28,24 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
             SubmitButton = ImageSource.FromResource("MyFirstProject.Images.buttonsubmit.png");
         }
 
+        private ImageSource FindImage()
+        {
+            foreach(Cars c in Cars.getURLs())
+            {
+                if(c.Name.Equals(_selectedItem))
+                {
+                    return c.URL;
+                }
+            }
+            return null;
+        }
         public Command OnSubmitClicked
         {
             get
             {
                 return new Command(() =>
-                {
-                   // Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(_selectedItem, getURLS()));
-
+                { 
+                   Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(_selectedItem, this.FindImage()));
                 });
             }
         }
@@ -55,7 +66,6 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
                 if (SelectedItem != value)
                     SetProperty(ref _selectedItem, value);
             }
-
         }
     }
 }

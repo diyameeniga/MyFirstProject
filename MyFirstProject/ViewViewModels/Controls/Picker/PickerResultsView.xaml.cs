@@ -12,7 +12,7 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PickerResultsView : ContentPage
     {
-        public PickerResultsView(string name, string image)
+        public PickerResultsView(string name, ImageSource image)
         {
             InitializeComponent();
             this.BindingContext = new PickerResultsViewModel();
