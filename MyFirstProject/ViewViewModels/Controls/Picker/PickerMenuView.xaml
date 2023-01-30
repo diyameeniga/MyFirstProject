@@ -15,7 +15,7 @@
 
                     <Button BackgroundColor="Transparent"
                         ImageSource="{Binding PickerButton}"
-                        Command="{Binding OnSubmitClicked}" />
+                        Command="{Binding OnXAMLSubmitClicked}" />
 
                     <Button BackgroundColor="Transparent"
                         ImageSource="{Binding PickerVMButton}"

@@ -3,6 +3,7 @@ using MyFirstProject.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace MyFirstProject.ViewViewModels.Controls.Picker
@@ -11,11 +12,18 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
     {
         public ImageSource PickerButton { get; set; }
         public ImageSource PickerVMButton { get; set; }
+
+        public ICommand OnXAMLSubmitClicked { get; }
+        public ICommand OnVMSubmitClicked { get; }
+
         public PickerMenuViewModel()
         {
             Title = Titles.PickerMenuViewTitle;
 
             GetEmbeddedImageSrc();
+
+            OnXAMLSubmitClicked = new Command(OnXAMLSubmitClickedAsync);
+            OnVMSubmitClicked = new Command(OnPickerVMClickedAsync);
         }
 
         private void GetEmbeddedImageSrc()
@@ -25,29 +33,39 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker
 
         }
 
-        public Command OnSubmitClicked
+        public async void OnXAMLSubmitClickedAsync()
         {
-            get
-            {
-                return new Command(() =>
-                {
-                    Application.Current.MainPage.Navigation.PushAsync(new PickerView());
-
-                });
-            }
+            await Application.Current.MainPage.Navigation.PushAsync(new PickerView());
         }
 
-        public Command OnVMSubmitClicked
+        public async void OnPickerVMClickedAsync()
         {
-            get
-            {
-                return new Command(() =>
-                {
-                    Application.Current.MainPage.Navigation.PushAsync(new PickerVMView());
-
-                });
-            }
+            await Application.Current.MainPage.Navigation.PushAsync(new PickerVMView());
         }
+
+        /*    public Command OnSubmitClicked
+            {
+                get
+                {
+                    return new Command(() =>
+                    {
+                        Application.Current.MainPage.Navigation.PushAsync(new PickerView());
+
+                    });
+                }
+            }
+
+            public Command OnVMSubmitClicked
+            {
+                get
+                {
+                    return new Command(() =>
+                    {
+                        Application.Current.MainPage.Navigation.PushAsync(new PickerVMView());
+
+                    });
+                }
+            } */
 
     }
 }

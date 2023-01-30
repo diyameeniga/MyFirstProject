@@ -5,6 +5,7 @@
              Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout Padding="0,20">
+            
             <Label Text="Audi VM Catalog"
                    FontSize="Large"
                    FontAttributes="Bold" 
@@ -16,10 +17,10 @@
                 <Picker x:Name="pickerVM"
                         Title="Select a Car"
                         TitleColor="DarkRed"
-                        SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                        SelectedItem="{Binding SelectedItem}"
                         VerticalOptions="FillAndExpand"
                         WidthRequest="300"
-                        ItemsSource="{Binding CarsList, Mode=TwoWay}" >
+                        ItemsSource="{Binding CarsList}" >
                 </Picker>
 
                 <Button BackgroundColor="Transparent"
@@ -27,6 +28,7 @@
                         Command="{Binding OnSubmitClicked}" />
 
             </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

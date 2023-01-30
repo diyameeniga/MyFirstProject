@@ -10,15 +10,18 @@
                      HorizontalOptions="Center">
 
             <Label Text="Results From Picker VM"
-               FontSize="Large"
-               FontAttributes="Bold" />
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
 
             <Label x:Name="resultLabel" 
-               FontSize="Medium"
-               FontAttributes="Bold"/>
+                   FontSize="Medium"
+                   FontAttributes="Bold" 
+                   HorizontalTextAlignment="Center"
+                   Text="{Binding PickerSelection}"/>
 
-            <Image x:Name="resultImage" 
-                   Source="{Binding ImageSource}"
+            <Image Source="{Binding ImageSrc}"
                    Aspect="AspectFill"/>
 
         </StackLayout>
