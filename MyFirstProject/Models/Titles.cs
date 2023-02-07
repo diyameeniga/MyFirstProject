@@ -46,5 +46,6 @@ namespace MyFirstProject.Models
         public static string PickerResultsViewTitle { get; } = "Picker Results View";
         public static string PickerVMViewTitle { get; } = "Picker VM View";
         public static string DatePickerTitle { get; } = "Date Picker View";
+        public static string DatePickerMenuViewTitle { get; } = "Date Picker Menu";
     }
 }

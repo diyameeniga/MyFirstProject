@@ -23,6 +23,7 @@
     <None Remove="Images\buttonblue.png" />
     <None Remove="Images\buttonred.png" />
     <None Remove="Images\buttonsubmit.png" />
+    <None Remove="Images\dpbuttonblue.png" />
     <None Remove="Images\iconsdelete.png" />
     <None Remove="Images\iconsedit.png" />
     <None Remove="Images\placeimg_640_480_tech.jpg" />
@@ -32,6 +33,7 @@
     <EmbeddedResource Include="Images\buttonblue.png" />
     <EmbeddedResource Include="Images\buttonred.png" />
     <EmbeddedResource Include="Images\buttonsubmit.png" />
+    <EmbeddedResource Include="Images\dpbuttonblue.png" />
     <EmbeddedResource Include="Images\iconsdelete.png" />
     <EmbeddedResource Include="Images\iconsedit.png" />
     <EmbeddedResource Include="Images\placeimg_640_480_tech.jpg" />
@@ -63,6 +65,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Controls\Entry\ResultsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\Controls\Picker\DatePicker\DatePickerMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Controls\Picker\DatePicker\DatePickerView.xaml">
