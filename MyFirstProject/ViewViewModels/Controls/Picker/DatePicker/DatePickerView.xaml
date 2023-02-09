@@ -3,18 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstProject.ViewViewModels.Controls.Picker.DatePicker.DatePickerView"
              Title="{Binding Title}">
+    
     <ContentPage.Content>
         <StackLayout Padding="20"
                      VerticalOptions="CenterAndExpand">
             
-       <!--     <Label Text="Start Date"
+            <Label Text="Start Date"
                    FontAttributes="Bold"
                    FontSize="Large"
                    TextColor="Crimson"
                    HorizontalOptions="CenterAndExpand" />
 
-            <DatePicker MinimumDate="01/01/2020"
-                        Date="01/01/2020"
+            <DatePicker MinimumDate="{Binding MinDate}"
+                        MaximumDate="{Binding MaxDate}"
+                        Date="{Binding DefaultDate}"
                         DateSelected="StartDatePicker_DateSelected"
                         BackgroundColor="DarkGreen"
                         TextColor="White"
@@ -29,8 +31,9 @@
                    TextColor="Blue"
                    HorizontalOptions="CenterAndExpand" />
 
-            <DatePicker MinimumDate="01/01/2020"
-                        Date="01/01/2020"
+            <DatePicker MinimumDate="{Binding MinDate}"
+                        MaximumDate="{Binding MaxDate}"
+                        Date="{Binding DefaultDate}"
                         DateSelected="EndDatePicker_DateSelected"
                         BackgroundColor="DarkRed"
                         TextColor="White"
@@ -38,8 +41,8 @@
 
             <Button BackgroundColor="Transparent"
                     ImageSource="{Binding SubmitButton}"
-                    Clicked="Button_Clicked" />  -->
-            
+                    Clicked="{Binding OnDateButtonClicked}" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
