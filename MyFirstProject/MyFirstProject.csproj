@@ -24,6 +24,7 @@
     <None Remove="Images\buttonred.png" />
     <None Remove="Images\buttonsubmit.png" />
     <None Remove="Images\dpbuttonblue.png" />
+    <None Remove="Images\dpbuttonred.png" />
     <None Remove="Images\iconsdelete.png" />
     <None Remove="Images\iconsedit.png" />
     <None Remove="Images\placeimg_640_480_tech.jpg" />
@@ -34,18 +35,21 @@
     <EmbeddedResource Include="Images\buttonred.png" />
     <EmbeddedResource Include="Images\buttonsubmit.png" />
     <EmbeddedResource Include="Images\dpbuttonblue.png" />
+    <EmbeddedResource Include="Images\dpbuttonred.png" />
     <EmbeddedResource Include="Images\iconsdelete.png" />
     <EmbeddedResource Include="Images\iconsedit.png" />
     <EmbeddedResource Include="Images\placeimg_640_480_tech.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ViewViewModels\Base\" />
+    <Folder Include="ViewViewModels\SQLite\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -73,6 +77,9 @@
     <EmbeddedResource Update="ViewViewModels\Controls\Picker\DatePicker\DatePickerView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\Controls\Picker\DatePicker\DatePickerVMView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Controls\Picker\PickerMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -95,6 +102,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Controls\Switch\SwitchView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModels\Dbase\SQLiteAddVacationView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Image\ActivityIndicator\ActivityIndicatorView.xaml">
@@ -148,7 +158,7 @@
     <EmbeddedResource Update="ViewViewModels\List\ListViewView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ViewViewModels\SQLite\SQLiteView.xaml">
+    <EmbeddedResource Update="ViewViewModels\Dbase\SQLiteView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

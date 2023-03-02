@@ -16,8 +16,12 @@
                          HorizontalOptions="CenterAndExpand">
 
                     <Button BackgroundColor="Transparent"
-                        ImageSource="{Binding DatePickerButton}"
-                        Command="{Binding OnSubmitClicked}" />
+                        ImageSource="{Binding DatePickerXAMLButton}"
+                        Command="{Binding OnXAMLClicked}" />
+
+                    <Button BackgroundColor="Transparent"
+                        ImageSource="{Binding DatePickerVMButton}"
+                        Command="{Binding OnVMClicked}" />
 
                 </StackLayout>
                 

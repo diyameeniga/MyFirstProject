@@ -10,6 +10,8 @@ namespace MyFirstProject
         {
             InitializeComponent();
 
+            DependencyService.Get<ISQLite>().GetConnectionWithCreateDatabase();
+
             MainPage = new NavigationPage(new MainPage());
         }
 

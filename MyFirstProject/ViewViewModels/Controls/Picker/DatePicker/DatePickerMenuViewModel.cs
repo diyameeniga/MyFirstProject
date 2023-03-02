@@ -10,9 +10,11 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker.DatePicker
 {
     class DatePickerMenuViewModel: BaseViewModel
     {
-        public ImageSource DatePickerButton { get; set; }
+        public ImageSource DatePickerXAMLButton { get; set; }
+        public ImageSource DatePickerVMButton { get; set; }
 
-        public ICommand OnSubmitClicked { get; }
+        public ICommand OnXAMLClicked { get; }
+        public ICommand OnVMClicked { get; }
 
         public DatePickerMenuViewModel()
         {
@@ -20,16 +22,22 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker.DatePicker
 
             GetEmbeddedImageSrc();
 
-            OnSubmitClicked = new Command(OnSubmitClickedAsync);
+            OnXAMLClicked = new Command(OnXAMLClickedAsync);
+            OnVMClicked = new Command(OnVMClickedAsync);
         }
         private void GetEmbeddedImageSrc()
         {
-            DatePickerButton = ImageSource.FromResource("MyFirstProject.Images.dpbuttonblue.png");
+            DatePickerXAMLButton = ImageSource.FromResource("MyFirstProject.Images.dpbuttonblue.png");
+            DatePickerVMButton = ImageSource.FromResource("MyFirstProject.Images.dpbuttonred.png");
         }
 
-        public async void OnSubmitClickedAsync()
+        public async void OnXAMLClickedAsync()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new DatePickerView());
+        }
+        public async void OnVMClickedAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new DatePickerVMView());
         }
     }
 }

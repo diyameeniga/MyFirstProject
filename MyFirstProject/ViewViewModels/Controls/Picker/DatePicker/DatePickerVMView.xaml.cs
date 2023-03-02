@@ -11,17 +11,18 @@ using Xamarin.Forms.Xaml;
 namespace MyFirstProject.ViewViewModels.Controls.Picker.DatePicker
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DatePickerView : ContentPage
+    public partial class DatePickerVMView : ContentPage
     {
         public DateTime _startDateSelected;
         public DateTime _oStartDateSelected;
         public DateTime _endDateSelected;
         public DateTime _oEndDateSelected;
-      
-        public DatePickerView()
+        public string resultLabel;
+
+        public DatePickerVMView()
         {
             InitializeComponent();
-            BindingContext = new DatePickerViewModel(); 
+            BindingContext = new DatePickerViewModel();
         }
 
         private void StartDatePicker_DateSelected(object sender, DateChangedEventArgs e)
@@ -38,10 +39,16 @@ namespace MyFirstProject.ViewViewModels.Controls.Picker.DatePicker
 
         public async void Button_Clicked(object sender, EventArgs e)
         {
-            string msg = "The start date selected is: " + _startDateSelected.ToShortDateString() + ", " +
-                "the end date selected is: " + _endDateSelected.ToShortDateString();
+            TimeSpan timeSpan = _endDateSelected.Date - _startDateSelected.Date;
+            resultLabel = String.Format("{0} day{1} between dates", 
+                                       timeSpan.Days, timeSpan.Days == 1 ? "" : "s");
 
-            await Application.Current.MainPage.DisplayAlert(Titles.DatePickerTitle, msg, "Ok");
+            string msg = "The start date selected is: " + _startDateSelected.ToShortDateString() + ", " +
+                "the end date selected is: " + _endDateSelected.ToShortDateString() + ", " + resultLabel;
+
+            
+
+            await Application.Current.MainPage.DisplayAlert(Titles.DateVMTitle, msg, "Ok");
         }
     }
 }
