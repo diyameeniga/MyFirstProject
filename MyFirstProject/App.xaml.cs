@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFirstProject.Patterns.Repositories;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,21 +11,9 @@ namespace MyFirstProject
         {
             InitializeComponent();
 
-            DependencyService.Get<ISQLite>().GetConnectionWithCreateDatabase();
+            DependencyService.Get<ISQLite>().GetConnectedWithCreateDatabase();
 
             MainPage = new NavigationPage(new MainPage());
-        }
-
-        protected override void OnStart()
-        {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
         }
     }
 }

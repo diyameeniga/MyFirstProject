@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModels.SQLite
+namespace MyFirstProject.ViewViewModels.Dbase
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SQLiteView : ContentPage

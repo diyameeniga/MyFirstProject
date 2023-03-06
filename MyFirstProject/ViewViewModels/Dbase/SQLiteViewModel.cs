@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MyFirstProject.ViewViewModels.Layout
+namespace MyFirstProject.ViewViewModels.Dbase //???
 {
     public class SQLiteViewModel : BaseViewModel
     {
@@ -47,7 +47,7 @@ namespace MyFirstProject.ViewViewModels.Layout
         {
             get
             {
-                return new Command<Vacation>((Vacation vacation)->
+                return new Command<Vacation>((Vacation vacation)=>
                 {
                     Application.Current.MainPage.Navigation.PushAsync(new SQLiteAddVacationView(vacation));
                     MessagingCenter.Subscribe<Vacation>(this, "AddVacation", async (data) =>
@@ -56,6 +56,18 @@ namespace MyFirstProject.ViewViewModels.Layout
 
                         MessagingCenter.Unsubscribe<Vacation>(this, "AddVacation");
                     });
+                });
+            }
+        }
+
+        public Command<Vacation> DeleteCommand
+        {
+            get
+            {
+                return new Command<Vacation>((Vacation vacation) =>
+                {
+                    DependencyService.Get<ISQLite>().DeleteVacation(vacation.ID);
+                    VacationCollection.Remove(vacation);
                 });
             }
         }

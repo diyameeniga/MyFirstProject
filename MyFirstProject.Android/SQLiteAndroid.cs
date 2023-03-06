@@ -12,10 +12,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Xamarin.Forms;
+[assembly: Dependency(typeof(MyFirstProject.Droid.SQLiteAndroid))]
 
 namespace MyFirstProject.Droid
 {
-    public class SQLiteAndroid: ISQLite
+    public class SQLiteAndroid : ISQLite
     {
         SQLiteConnection con;
 

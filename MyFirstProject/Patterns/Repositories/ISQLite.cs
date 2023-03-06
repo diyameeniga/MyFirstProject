@@ -8,7 +8,7 @@ namespace MyFirstProject.Patterns.Repositories
 {
     public interface ISQLite
     {
-        SQLiteConnection GetConnectedWithCreateDatabase();
+        SQLiteConnection GetConnectionWithCreateDatabase();
 
         List<Vacation> GetVacation();
 

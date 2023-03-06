@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using MyFirstProject.Models;
 using MyFirstProject.Patterns.Repositories;
+using Xamarin.Forms;
 
+[assembly: Dependency(typeof(MyFirstProject.iOS.SQLiteIOS))]
 namespace MyFirstProject.iOS
 {
     public class SQLiteIOS: ISQLite
