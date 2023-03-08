@@ -104,7 +104,7 @@
     <EmbeddedResource Update="ViewViewModels\Controls\Switch\SwitchView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ViewViewModels\Dbase\SQLiteAddVacationView.xaml">
+    <EmbeddedResource Update="ViewViewModels\Dbase\SQLiteAddVacation_View.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModels\Image\ActivityIndicator\ActivityIndicatorView.xaml">

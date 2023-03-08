@@ -10,7 +10,7 @@ namespace MyFirstProject.ViewViewModels.Dbase
 {
     public class SQLiteAddVacationViewModel: BaseViewModel
     {
-        public SQLiteAddVacationViewModel() { }
+       // public SQLiteAddVacationViewModel() { }
         public Vacation VacationCollection { get; set; }
         public string Country { get; set; }
         public string City { get; set; }

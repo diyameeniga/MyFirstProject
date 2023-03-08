@@ -63,7 +63,6 @@
                                 <Switch x:Name="IsVisited"
                                IsToggled="{Binding Visited, Mode=TwoWay}"
                                Grid.Column="2"
-                               Toggled="IsVisited"
                                ThumbColor="Red"
                                OnColor="Green"/>
 
@@ -78,7 +77,7 @@
                             TextTransform="None"/>
 
                         <Button Text="Delete"
-                            Command="{Binding Path=BindingContext.AddCommand,
+                            Command="{Binding Path=BindingContext.DeleteCommand,
                                               Source={x:Reference VacationView}, Mode=TwoWay}"
                             CommandParameter="{Binding .}"
                             HorizontalOptions="EndAndExpand"

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MyFirstProject.ViewViewModels.Dbase //???
+namespace MyFirstProject.ViewViewModels.Dbase //?
 {
     public class SQLiteViewModel : BaseViewModel
     {
@@ -49,7 +49,7 @@ namespace MyFirstProject.ViewViewModels.Dbase //???
             {
                 return new Command<Vacation>((Vacation vacation)=>
                 {
-                    Application.Current.MainPage.Navigation.PushAsync(new SQLiteAddVacationView(vacation));
+                    Application.Current.MainPage.Navigation.PushAsync(new SQLiteAddVacation_View(vacation));
                     MessagingCenter.Subscribe<Vacation>(this, "AddVacation", async (data) =>
                     {
                         await RefreshVacationListData();
